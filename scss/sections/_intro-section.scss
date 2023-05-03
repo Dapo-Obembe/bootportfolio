@@ -1,0 +1,46 @@
+@use "../custom" as *;
+@use "../components/typography" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+.intro-section {
+  @include gradient;
+  height: 100vh;
+  padding: 5rem 0 0 0;
+  display: grid;
+  place-items: center;
+
+  .hero-description {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: $white;
+  }
+
+  /* Video intro column */
+  .intros {
+    .video-box {
+      position: relative;
+
+      a {
+        @include absolutecenter;
+
+        span {
+          i {
+            color: $secondary;
+            border-radius: 50%;
+            animation: shrink 4.5s linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: scale(0);
+    font-size: 3rem;
+  }
+  100% {
+    transform: scale(1.5);
+    font-size: 6rem;
+  }
+}

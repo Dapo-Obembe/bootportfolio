@@ -1,0 +1,25 @@
+@use "../custom" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font;
+}
+
+p {
+  font-family: default;
+}
+
+.display-2 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+
+  &--intro {
+    display: inline-block;
+    font-weight: 700;
+    color: $white;
+  }
+}
